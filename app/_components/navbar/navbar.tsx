@@ -7,10 +7,9 @@ export default function Navbar() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        {navigations
-          .map((navigation) =>
+        {navigations?.map((navigation) =>
             <NavigationMenuItem>
-              (navigation as NavigationElementGroup)
+              (navigation as NavigationElementGroup)?
               .elements
               ? (
               <NavbarGroup

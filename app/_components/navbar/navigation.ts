@@ -1,3 +1,5 @@
+import { Links } from "../../consts/links.const";
+
 export interface NavbarElementData {
   link?: string;
   name: string;
@@ -8,20 +10,7 @@ export interface NavbarGroupData extends NavbarElementData {
   elements: NavbarElementData[];
 }
 
-export enum Links {
-  HOME = "/",
-  FAQ = "/faq",
-  CONTACT = "/contact",
-  COLLABORATION = "/collaboration",
-  NEWS = "https://www.facebook.com/bialystokwosp",
-  VOLOUNTEERS = "/volounteers",
-  MONEY_BOX = "/money-box",
-  GALLERY = "https://www.facebook.com/bialystokwosp/photos",
-  MARATHONS = "/marathons",
-  CONCERTS = "/concerts",
-  PARTNERS = "/partners",
-  SUPPORT = "/support",
-}
+
 
 export const navigations: NavbarElementData[] = [
   {
@@ -92,3 +81,5 @@ export const navigations: NavbarElementData[] = [
     link: Links.NEWS,
   },
 ];
+export { Links };
+

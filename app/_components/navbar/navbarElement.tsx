@@ -7,9 +7,9 @@ type NavElementProps = { data: NavbarElementData }
 export default function NavbarElement({ data }: NavElementProps) {
 
     return (
-        <Link href={data.link} legacyBehavior passHref>
+        <Link href={data?.link ?? '/'} legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                {data.name}
+                {data?.name ?? 'ERR'}
             </NavigationMenuLink>
         </Link>
     )

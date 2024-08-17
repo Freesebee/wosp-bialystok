@@ -7,10 +7,10 @@ type NavGroupElementProps = { data: NavbarGroupData };
 export default function NavbarGroup({ data }: NavGroupElementProps) {
 	return (
 		<div>
-			<NavigationMenuTrigger>{data.name}</NavigationMenuTrigger>
+			<NavigationMenuTrigger>{data?.name}</NavigationMenuTrigger>
 			<NavigationMenuContent>
 				<ul>
-					{data.elements.map((element) => (
+					{data?.elements?.map((element) => (
 						<li key={element.name}>
 							<NavbarElement data={element}></NavbarElement>
 						</li>

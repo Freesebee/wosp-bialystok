@@ -4,7 +4,7 @@ import {
   NavbarElementData,
   navigations,
   Links,
-} from "../../../components/navbar/navigation";
+} from "../../../_components/navbar/navigation";
 import { useRouter } from "next/navigation";
 
 export default function FaqSection() {
