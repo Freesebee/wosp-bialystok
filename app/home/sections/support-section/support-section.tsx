@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import {
   Links,
-  NavigationElement,
+  NavbarElementData,
   navigations,
 } from "../../../components/navbar/navigation";
 import { Button, Col, Container, Row } from "react-bootstrap";
@@ -12,7 +12,7 @@ import supportSectionBg from "public/images/section-bg/support.jpg";
 export default function SupportSection() {
   const router = useRouter();
 
-  const [supportNavigation] = useState<NavigationElement>(
+  const [supportNavigation] = useState<NavbarElementData>(
     navigations.find((n) => n.link == Links.SUPPORT)
   );
 

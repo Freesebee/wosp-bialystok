@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import {
-  NavigationElement,
+  NavbarElementData,
   navigations,
   Links,
 } from "../../../components/navbar/navigation";
@@ -10,7 +10,7 @@ import { useRouter } from "next/navigation";
 export default function FaqSection() {
   const router = useRouter();
 
-  const [faqNavigation] = useState<NavigationElement>(
+  const [faqNavigation] = useState<NavbarElementData>(
     navigations.find((n) => n.link == Links.FAQ)
   );
 

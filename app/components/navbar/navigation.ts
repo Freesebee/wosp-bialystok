@@ -1,13 +1,11 @@
-export interface NavigationElement {
+export interface NavbarElementData {
   link?: string;
   name: string;
   disabled?: boolean;
-  showInNavbar?: boolean;
 }
 
-export interface NavigationElementGroup extends NavigationElement {
-  showInNavbar: boolean;
-  elements: NavigationElement[];
+export interface NavbarGroupData extends NavbarElementData {
+  elements: NavbarElementData[];
 }
 
 export enum Links {
@@ -25,21 +23,18 @@ export enum Links {
   SUPPORT = "/support",
 }
 
-export const navigations: NavigationElement[] = [
+export const navigations: NavbarElementData[] = [
   {
     name: "Pytania",
     link: Links.FAQ,
-    showInNavbar: true,
   },
   {
     name: "Kontakt",
     link: Links.CONTACT,
-    showInNavbar: true,
   },
   {
     name: "Wsparcie Finału",
     link: Links.SUPPORT,
-    showInNavbar: false,  //repeairs temporary bug (router.push(newsNavigation.link)) in home.tsx s
   },
   {
     name: "Strona główna",
@@ -47,65 +42,53 @@ export const navigations: NavigationElement[] = [
   },
   {
     name: "Aktualności",
-    showInNavbar: true,
     elements: [
       {
         name: "Strona Facebook",
         link: Links.NEWS,
-        showInNavbar: true,
       },
     ],
-  } as NavigationElementGroup,
+  } as NavbarGroupData,
   {
     name: "Wsparcie Finału",
-    showInNavbar: true,
     elements: [
       {
         name: "Formy wsparcia",
         link: Links.SUPPORT,
-        showInNavbar: true,
       },
       {
         name: "Dołącz do Sztabu",
         link: Links.COLLABORATION,
-        showInNavbar: true,
       },
       {
         name: "Puszka stacjonarna",
         link: Links.MONEY_BOX,
-        showInNavbar: true,
       },
     ],
-  } as NavigationElementGroup,
+  } as NavbarGroupData,
   {
     name: "Wydarzenia",
-    showInNavbar: true,
     elements: [
       {
         name: "Maratony",
         link: Links.MARATHONS,
-        showInNavbar: true,
       },
       {
         name: "Koncerty",
         link: Links.CONCERTS,
-        showInNavbar: true,
       },
     ],
-  } as NavigationElementGroup,
+  } as NavbarGroupData,
   {
     name: "Patnerzy",
     link: Links.PARTNERS,
-    showInNavbar: true,
   },
   {
     name: "Galeria",
     link: Links.GALLERY,
-    showInNavbar: true,
   },
   {
     name: "Aktualności - Facebook",
     link: Links.NEWS,
-    showInNavbar: false,  //repeairs temporary bug (router.push(newsNavigation.link)) in home.tsx s
   },
 ];

@@ -12,7 +12,7 @@ import {
 } from "../components/footer/models/wospInternalLink";
 import {
   Links,
-  NavigationElement,
+  NavbarElementData,
   navigations,
 } from "../components/navbar/navigation";
 import SupportSection from "./sections/support-section/support-section";
@@ -28,11 +28,11 @@ export default function Home() {
     wospInternalLinks.find((s) => s.key === "iwolontariusz")
   );
 
-  const [newsNavigation] = useState<NavigationElement>(
+  const [newsNavigation] = useState<NavbarElementData>(
     navigations.find((n) => n.link == Links.NEWS)
   );
 
-  const [partnersNavigation] = useState<NavigationElement>(
+  const [partnersNavigation] = useState<NavbarElementData>(
     navigations.find((n) => n.link == Links.PARTNERS)
   );
 

@@ -2,13 +2,13 @@ import { Col, Container, Row } from "react-bootstrap";
 import { socialMediaLinks } from "./models/socialMediaLink";
 import { wospInternalLinks } from "./models/wospInternalLink";
 import { useState } from "react";
-import { NavigationElement, navigations, Links } from "../navbar/navigation";
+import { NavbarElementData, navigations, Links } from "../navbar/navigation";
 import { EXTERNAL_SOURCE_KEYS } from "../../consts/external-source-keys.const";
 import { ExteralSource } from "../../faq/components/volounteerTabHeader";
 import externalSources from "../../../public/info/external-sources.json";
 
 const ContactFooter = () => {
-  const [contactNavigation] = useState<NavigationElement>(
+  const [contactNavigation] = useState<NavbarElementData>(
     navigations.find((n) => n.link == Links.CONTACT)
   );
 
